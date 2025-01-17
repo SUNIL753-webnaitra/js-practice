@@ -13,8 +13,11 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
+
+  
     <header>
         <div class="container">
 
@@ -36,13 +39,52 @@
               
             <div class="authaction">
                 <a href="#" class="login-link">Login</a>
-                <button class="btn-signup">Sign Up</button>
+                <button class="btn-signup" id="signup">Sign Up</button>
             </div>
         </div>
-       
+        <div class="signup-form" id="signup_form">
+            <div class="container">
+                <div class="signup-box" id="signup-box">
+                    <div class="sign-title">
+                        <h4>Sign up</h4>
+                        <i class="fa-solid fa-xmark" id="popclose"></i>
+                    </div>
+                    <form >
+                      <input type="text" placeholder="Full Name"> 
+                      <input type="email" placeholder="Email"> 
+                      
+                          <p>
+                            <input type="checkbox" id="terms" />
+                            <label for="terms">
+                              I agree to Zomato's <a href="#" style="color: #ff0000;">Terms of Service</a>, 
+                              <a href="#" style="color: #ff0000;">Privacy Policy</a> and 
+                              <a href="#" style="color: #ff0000;">Content Policies</a>.
+                            </label>
+                          </p>
+                       
+    <button> Create account</button>
+
+    <div class="other-option">
+        <hr> <span>Or</span>
+        <hr>
+    </div>
+
+    <div class="google-sign">
+        <i class="fa-brands fa-google"></i>
+        <a href="google.com" target="_blank" style="text-decoration: none; color: rgb(18, 18, 19); font-size: 16px;">
+            Sign in with Google
+          </a>
+    </div>
+ <div class="sign-mess">
+    <p>Already have an account? <a href="#">Log in</a></p>
+ </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </header>
     <section class="banner">
-<div class="container">
+    <div class="container">
     <div class="banner-section">
         <div class="banner-heading">
 <h2>Your Favorite Food  <br>Delivery Partner</h2>
@@ -75,26 +117,31 @@
          </div>
          <div class="dishes-pizza">
             <div class="dishes-img">
-                <img src="./img/🍕.png" alt="">
+                <img src="./img/🍔.png" alt="">
             </div>
             <h4>Burger</h4>
          </div>
          <div class="dishes-pizza">
             <div class="dishes-img">
-                <img src="./img/🍕.png" alt="">
+                <img src="./img/🍣.png" alt="">
             </div>
             <h4>Sushi</h4>
          </div>
         </div>
         <div class="dishes-heading">
             <h4>Find <span>deals</span>, <span>free delivery</span> , and more  <br>from our restaurant partners.</h4>
+            <div class="dish-img">
+                <img src="./img/Illustrations.png" alt="">
+            </div>
+           
         </div>
     </div>
-    <!-- <div class="dishes-details">
-      
+    <div class="dishes-details text-first">
         <div class="dishes-heading">
-            <h4>Find <span>deals</span>, <span>free delivery</span> , and more  <br>from our restaurant partners.</h4>
+            <img src="./img/Vector (9).png" alt="">
+           <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
         </div>
+        
         <div class="dishes-product">
             <div class="dishes-pizza">
                <div class="dishes-img">
@@ -115,7 +162,10 @@
                <h4>Sushi</h4>
             </div>
            </div>
-    </div> -->
+    
+          
+    
+        </div>
 </div>
 </section>
 <section class="fqa">
@@ -176,11 +226,13 @@
     <p>Browse local restaurants and businesses for delivery by entering your address blow.</p>
 </div>
 <div class="contact-form">
-  <input type="text" name="" id="" placeholder="Enter you email address"><button class="btn-signup">send</button>
+  <input type="text" name="" id="" placeholder="Enter you email address " class="center-placeholder"><button class="btn-signup">send</button>
 </div>
    </div> 
 </div>
 </section>
+
+
 <footer class="footer">
 <div class="container">
     <div class="footer-sect">
@@ -250,19 +302,34 @@
 </footer>
 
     <script>
+      $(document).ready(function() {
+    $('.slider').slick({
+        autoplay: false,
+        autoplaySpeed: 2000,
+        dots: false,
+        arrows: true
+    });
+});
         const menutoggle = document.getElementById("menu-toggle");
         const navlist = document.querySelector(".nav-list");
     
         menutoggle.addEventListener('click', () => {
             navlist.classList.toggle("show");
         });
-        $(document).ready(function() {
-    $('.slider').slick({
-      autoplay: false,
-      autoplaySpeed: 2000,
-      dots: false,
-      arrows: true,
-    });
+    const signup = document.getElementById("signup");
+const signup_form =document.getElementById("signup_form");
+ const popclose = document.getElementById("popclose");
+//  const signup_box = document.getElementById("signup-box");
+ 
+signup.addEventListener('click', () => {
+    signup_form.classList.toggle('popup')
+    console.log('Signup button clicked');
+
+    popclose.addEventListener('click', () => {
+        console.log("gghj");
+        signup_form.classList.remove('popup');
+
+});
   });
     </script>
 </body>

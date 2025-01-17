@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: "Montserrat", serif;
 }
@@ -90,7 +91,7 @@ color: #000;
     display: none;
 }
 .order-search {
-  min-width: 200px;
+  min-width: 350px;
   background-color: #fff;
   display: inline-flex;
   border-radius: 50px;
@@ -103,9 +104,12 @@ color: #000;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   border: none;
+  width: 60%;
 }
 .download-option {
   margin-top: 30px;
+  display: flex;
+  gap: 20px;
 }
 .dishes-heading h4 {
   font-size: 25px;
@@ -114,17 +118,33 @@ color: #000;
   margin-top: 40px;
 }
 .banner-section{
-  display: grid;
-  grid-template-columns: repeat(2 ,1fr);
+  /* display: grid;
+  grid-template-columns: repeat(2 ,1fr); */
+  display: flex;
+  justify-content: space-between;
+}
+.banner-heading {
+  flex: 1;
+}
+.banner-img {
+  flex: 1;
 }
 .banner-img img{
   width: 100%;
 }
+.banner-heading p {
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
 .banner-heading h2{ 
-  font-size: 61px;
+  font-size: 4rem;
   font-weight: 500;
 }
-
+.text-first .dishes-product {
+  max-width: 568px;
+  margin-right: 140px;
+  margin-left:0px;
+}
 .dishes {
   text-align: center;
   
@@ -153,6 +173,14 @@ color: #000;
   max-width: 568px;
   margin-left: 140px;
 }
+.dish-img{
+  text-align: end;
+  margin-top: 10px;
+}
+ .contact-form .center-placeholder{
+  padding-left: 15px;
+}
+
 .dishes-img {
   background-color: #fff;
   border-radius: 50%;
@@ -241,7 +269,7 @@ text-decoration: none;
     margin: auto;
 }
 .testmontial{
-  margin-top: 30px;
+  margin-block: 100px;
 }
 .testmontial .slick-next:before, .testmontial .slick-prev:before {
   font-family: slick;
@@ -381,43 +409,106 @@ padding: 10px;
   color: #fff;
   padding-block: 0px;
 }
-  @media screen and (max-width:768px) {
-    .toggle-menu{
-        display: block;
-      }
-      header .nav-list {
-        top: 100%;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        left: 0;
-        background-color: #E94339;
-        width: 100%;
-        height: 100vh;
-        display: none;
-        
-    }
-    header .show.nav-list {
-    
-      display: flex;
+.footer-header ul li{
+  list-style: none;
+}
+.other-option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.other-options span{
+ background-color: #FAFAFA;
+ width: 50px;
+}
+.other-option hr{
+  width: 50%;
+}
+/* popup functional codee */
+.popupclose.signup_form{
+  opacity: 0;
+  display: none;
+}
+.sign-title{
+  display: flex;
+  justify-content: space-between;
+  padding-block: 15px;
+  align-items: center;
+}
+.sign-title h4{
+  font-size:  30px;
+}
+.signup-box form input{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius:8px;
+  outline: none;
+  border: none;
+}
+.signup-box form p {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  gap: 5px;
+}
 
-      align-items:  center;
-  }
-  /* .clickoption:checked ~ nav {
-    display:block;
-   
-   
-} */
+.signup-box form p input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin: 0px;
+}
+
+.signup-box form p label {
+  flex: 1; 
+  color: #333; 
+  font-size: 14px;
+  line-height: 1.5;
+}
+.signup-box form button{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius:8px;
+  outline: none;
+  border: none;
+  background-color: #b92922;
+}
+.signup-form {
+  max-width: 400px;
+  margin: 100px auto;
+  background-color: #E2E2E2;
+  color: #000;
  
-i.fa-solid.fa-bars {
-    position: absolute;
-    right: 10px;
+  height: 50vh;
+  position: fixed; /* Use fixed to position relative to viewport */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position back to center */
+  width: 100%;
+  opacity: 0;
+  border-radius: 10px;
+  z-index: 10;
 }
-.authaction {
-    display: none;
+.popup.signup-form{
+  opacity: 1;
+} 
+.google-sign{
+  text-align: center;
+  border: 1px solid ;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
-.banner-section{
-  grid-template-columns: repeat(1 ,1fr);
+.sign-mess{
+  padding-block: 10px;
+  border-top: 1px solid;
+  margin-block: 15px;
+}
  
-}
-  }
