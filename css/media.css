@@ -99,4 +99,29 @@ header .show.nav-list {
   display: flex;
   justify-content:center;
 }
+.banner-heading p {
+    font-size: 0.8rem;
+  
+}
+.banner-heading h2 {
+    font-size: 2rem;
+   
+}
+.dishes-product {
+    flex-direction: column;
+}
+.dishes h2 {
+    font-size: 2rem;
+}
+.dishes-img {
+    max-width: 108px;
+    max-height: 106px;
+    margin: auto;
+}
+.dishes-heading h4 {
+    font-size: 17px;
+}
+.dishes-heading p{
+    font-family: 14px;
+}
   }
