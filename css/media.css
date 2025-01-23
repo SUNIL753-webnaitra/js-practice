@@ -176,5 +176,11 @@ section.fqa {
     .footer-sect {
         padding-block: 70px;
     }
+    .order-search {
+    
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+    }
   }
    
