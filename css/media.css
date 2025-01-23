@@ -145,3 +145,19 @@ header .show.nav-list {
     margin-left: 15px;
 }
   }
+
+  @media screen and (max-width:576px) {
+    .cutomer-fqa {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .dish-img {
+        text-align: center;
+        margin-top: 25px;
+    }
+    .text-first .dishes-heading {
+        margin-top: 25px; 
+        text-align: center;
+        padding-block: 20px;
+    }
+  }
+   

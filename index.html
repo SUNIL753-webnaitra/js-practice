@@ -331,21 +331,23 @@ signup.addEventListener('click', () => {
 
 });
 
+ 
+
+  });
   function applyEffect() {
     const inputField = document.getElementById('email');
     console.log("hehg");
     if (inputField.value.trim() === "") {
       // Add a red border if input is empty
-      inputField.style.border = "2px solid red";
+  
+      inputField.classList.add('form-add');
       alert("Please enter your email address!");
     } else {
       // Add green border if input is not empty
-      inputField.style.border = "2px solid green";
+    //   inputField.style.border = "2px solid green";
       alert("Email submitted successfully!");
     }
   }
-
-  });
     </script>
 </body>
 </html>
