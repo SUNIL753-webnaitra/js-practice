@@ -202,7 +202,7 @@ color: #000;
   border-radius: 50%;
   padding: 10px;
   min-width: 108px;
-  min-height: 146px;
+  min-height: 108px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -511,6 +511,7 @@ padding: 10px;
   opacity: 0;
   border-radius: 10px;
   z-index: 10;
+  display: none;
 }
 .popup.signup-form{
   opacity: 1;

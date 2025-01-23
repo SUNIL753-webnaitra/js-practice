@@ -126,5 +126,16 @@ header .show.nav-list {
 .dishes-heading p{
     font-family: 14px;
 }
-
+.testmontial .slick-prev {
+    bottom: -10px !important;
+    left: 42% !important;
+    top: unset  !important;
+}
+.testmontial .slick-next {
+    bottom: -10px !important;
+    right: 42% !important;
+    left: unset !important;
+    /* left: 45% !important; */
+    top: unset  !important;
+}
   }
