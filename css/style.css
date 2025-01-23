@@ -5,7 +5,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html, body {
+  height: auto; /* Let content define height */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 body{
     font-family: "Montserrat", serif;
 }
@@ -383,8 +388,11 @@ section.contact {
   flex: 1;
 }
 .footer-link {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
+    flex: 1; */
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
     flex: 1;
 }
 .footer-link ul{
