@@ -138,4 +138,7 @@ header .show.nav-list {
     /* left: 45% !important; */
     top: unset  !important;
 }
+.dishes h2 {
+    margin-top: 60px;
+}
   }
